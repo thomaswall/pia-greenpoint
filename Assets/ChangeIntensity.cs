@@ -33,8 +33,8 @@ public class ChangeIntensity : MonoBehaviour {
 	void Update () {
 		float time_since_trigger = Time.fixedTime - (trigger + offset);
 		if (time_since_trigger > 0 && time_since_trigger < 5)
-			gameObject.GetComponent<TubeLight> ().m_Intensity = (float)(0.8 * Mathf.Abs (Mathf.Sin ((Time.fixedTime + offset) * 10)));
-		else if (time_since_trigger < 10)
+			gameObject.GetComponent<TubeLight> ().m_Intensity = (float)(0.8 * Mathf.Abs (Mathf.Sin ((Time.fixedTime + offset) * 15)));
+		else if (Time.fixedTime - trigger < 10)
 			gameObject.GetComponent<TubeLight> ().m_Intensity = (float)0.8;
 		else
 			gameObject.GetComponent<TubeLight> ().m_Intensity = 0;
