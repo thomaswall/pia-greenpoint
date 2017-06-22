@@ -8,6 +8,7 @@ public class lightsOn : MonoBehaviour {
 
 	void Start () {
 		color = GetComponent<Renderer>().material.color;
+		color = new Color (color.r, color.g, color.b, color.a / 2);
 	}
 
 	void Update () {
